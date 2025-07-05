@@ -1,0 +1,24 @@
+:root {
+    --background: rgba(255, 255, 255, 0.5);
+    --background-img: url("background.jpg");
+    --foreground: black;
+}
+
+html {
+    background-image: var(--background-img);
+    background-repeat: repeat;
+    color: var(--foreground);
+}
+
+body {
+    background-color: var(--background);
+    padding: 2em;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: rgba(0, 0, 0, 0.5);
+        --foreground: white;
+        --background-img: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('background.jpg');
+    }
+}
