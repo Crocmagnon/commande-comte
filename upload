@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in *; do
+    curl -T "$file" "ftp://$FTP_USER:$FTP_PASS@ftp.cluster021.hosting.ovh.net/www/"
+done
