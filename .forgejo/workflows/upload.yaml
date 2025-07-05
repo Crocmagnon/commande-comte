@@ -1,7 +1,7 @@
 on: [push]
 jobs:
-  test:
-    runs-on: codeberg-tiny
+  upload:
+    runs-on: codeberg-tiny-lazy
     steps:
       - uses: actions/checkout@v4
       - run: ./upload

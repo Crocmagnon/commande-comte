@@ -1,5 +1,6 @@
 #!/bin/bash
+set -euo pipefail
 
 for file in *; do
-    curl -T "$file" "ftp://$FTP_USER:$FTP_PASS@ftp.cluster021.hosting.ovh.net/www/"
+    curl -m 30 -T "$file" "ftp://$FTP_USER:$FTP_PASS@ftp.cluster021.hosting.ovh.net/www/"
 done
