@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-for file in *; do
-    curl -m 30 -T "$file" "ftp://$FTP_USER:$FTP_PASS@ftp.cluster021.hosting.ovh.net/www/"
+for file in .htaccess *; do
+  echo "uploading $file..."
+  curl -m 30 -T "$file" "ftp://$FTP_USER:$FTP_PASS@ftp.cluster021.hosting.ovh.net/www/"
 done
